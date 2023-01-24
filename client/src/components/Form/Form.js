@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import FileBase from "react-file-base64";
-
+import tumblrite from "../../images/tumblriteAbbr.png";
 import useStyles from "./styles";
 import { createPost, updatePost } from "../../actions/posts";
 
@@ -51,8 +51,12 @@ const Form = ({ currentId, setCurrentId }) => {
   if (!user?.result?.name) {
     return (
       <Paper className={classes.paper}>
-        <Typography variant="h6" align="center">
-          Please Sign In to create your own memories and like other's memories.
+        <div className={classes.brandContainer}>
+          <img src={tumblrite} alt="icon" height="80" />
+        </div>
+        <Typography variant="h6" align="center" className={classes.welcomeText}>
+          اینجا هر کسی می‌تونه بنویسه! همین حالا حساب کاربری خودت را بساز و
+          اولین پست خودت رو بذار.
         </Typography>
       </Paper>
     );
@@ -69,16 +73,6 @@ const Form = ({ currentId, setCurrentId }) => {
         <Typography variant="h6" className={classes.title}>
           {currentId ? `ویرایش "${post.title}"` : "نوشتن پست جدید"}
         </Typography>
-        {/* <TextField
-          name="creator"
-          variant="outlined"
-          label="نام نمایشی خود را وارد کنید"
-          fullWidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({ ...postData, creator: e.target.value })
-          }
-        /> */}
         <TextField
           name="title"
           variant="outlined"

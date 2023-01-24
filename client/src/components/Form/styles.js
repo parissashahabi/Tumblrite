@@ -15,6 +15,15 @@ export default makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
   },
+  brandContainer: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    margin: "50px 0",
+  },
+  welcomeText: {
+    marginBottom: "20px",
+  },
   fileInput: {
     width: "95%",
     margin: "10px 0",
