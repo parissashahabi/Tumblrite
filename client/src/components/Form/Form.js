@@ -56,7 +56,7 @@ const Form = ({ currentId, setCurrentId }) => {
         </div>
         <Typography variant="h6" align="center" className={classes.welcomeText}>
           اینجا هر کسی می‌تونه بنویسه! همین حالا حساب کاربری خودت را بساز و
-          اولین پست خودت رو بذار.
+          اولین پستت رو بذار.
         </Typography>
       </Paper>
     );

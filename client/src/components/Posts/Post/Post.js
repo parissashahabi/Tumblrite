@@ -128,8 +128,6 @@ const Post = ({ post, setCurrentId }) => {
           onClick={() => dispatch(likePost(post._id))}
           disabled={!user?.result}
         >
-          {/* <FavoriteIcon fontSize="small" />
-          &nbsp;{post.likes.length}{" "} */}
           <Likes />
         </Button>
         <RWebShare

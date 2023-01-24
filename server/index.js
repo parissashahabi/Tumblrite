@@ -20,7 +20,7 @@ app.use("/user", userRouter);
 const CONNECTION_URL =
   "mongodb+srv://parisashahabi:parisa1379@cluster0.cjha6le.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
-
+mongoose.set("strictQuery", true);
 mongoose
   .connect(CONNECTION_URL, {
     useNewUrlParser: true,
